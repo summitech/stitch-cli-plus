@@ -1,0 +1,20 @@
+{
+  "name": "stitch-cli-plus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/summitech/stitch-cli-plus.git"
+  },
+  "keywords": [],
+  "author": "Fatimah Sanni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/summitech/stitch-cli-plus/issues"
+  },
+  "homepage": "https://github.com/summitech/stitch-cli-plus#readme"
+}
