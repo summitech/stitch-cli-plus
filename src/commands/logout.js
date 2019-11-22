@@ -10,10 +10,7 @@ class LogoutCommand extends Command {
   }
 }
 
-LogoutCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
+LogoutCommand.description = `Logout`
 
 LogoutCommand.flags = {
   name: flags.string({char: 'n', description: 'name to print'}),

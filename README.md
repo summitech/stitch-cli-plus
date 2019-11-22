@@ -31,6 +31,7 @@ USAGE
 * [`msp help [COMMAND]`](#msp-help-command)
 * [`msp login`](#msp-login)
 * [`msp logout`](#msp-logout)
+* [`msp use`](#msp-use)
 
 ## `msp help [COMMAND]`
 
@@ -80,4 +81,22 @@ DESCRIPTION
 ```
 
 _See code: [src/commands/logout.js](https://github.com/summitech/stitch-cli-plus/blob/v1.0.0/src/commands/logout.js)_
+
+## `msp use`
+
+Describe the command here
+
+```
+USAGE
+  $ msp use
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/use.js](https://github.com/summitech/stitch-cli-plus/blob/v1.0.0/src/commands/use.js)_
 <!-- commandsstop -->
