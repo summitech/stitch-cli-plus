@@ -1,20 +1,58 @@
 {
   "name": "stitch-cli-plus",
+  "description": "A CLI that extends the original stitch cli and allows developers do more",
   "version": "1.0.0",
-  "description": "",
+  "author": "Fatimah Sanni",
+  "bin": {
+    "msp": "./bin/run"
+  },
+  "bugs": {
+    "url": "https://github.com/summitech/stitch-cli-plus/issues"
+  },
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "@oclif/command": "^1.5.19",
+    "@oclif/config": "^1.13.3",
+    "@oclif/plugin-help": "^2.2.1",
+    "axios": "^0.19.0",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "globby": "^8.0.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/summitech/stitch-cli-plus#readme",
+  "keywords": [],
+  "license": "ISC",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "msp",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/summitech/stitch-cli-plus.git"
   },
-  "keywords": [],
-  "author": "Fatimah Sanni",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/summitech/stitch-cli-plus/issues"
-  },
-  "homepage": "https://github.com/summitech/stitch-cli-plus#readme"
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
 }
