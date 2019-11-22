@@ -30,6 +30,7 @@ USAGE
 <!-- commands -->
 * [`msp help [COMMAND]`](#msp-help-command)
 * [`msp login`](#msp-login)
+* [`msp logout`](#msp-logout)
 
 ## `msp help [COMMAND]`
 
@@ -50,11 +51,25 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1
 
 ## `msp login`
 
-Describe the command here
+Login programatically using your API key
 
 ```
 USAGE
   $ msp login
+
+OPTIONS
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/login.js](https://github.com/summitech/stitch-cli-plus/blob/v1.0.0/src/commands/login.js)_
+
+## `msp logout`
+
+Describe the command here
+
+```
+USAGE
+  $ msp logout
 
 OPTIONS
   -n, --name=name  name to print
@@ -64,5 +79,5 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src/commands/login.js](https://github.com/summitech/stitch-cli-plus/blob/v1.0.0/src/commands/login.js)_
+_See code: [src/commands/logout.js](https://github.com/summitech/stitch-cli-plus/blob/v1.0.0/src/commands/logout.js)_
 <!-- commandsstop -->

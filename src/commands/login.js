@@ -71,7 +71,6 @@ class LoginCommand extends Command {
       publicKey: answers.public,
       privateKey: answers.private
     };
-    fs.writeJSONSync(db, user);
     await this.login(user);
     this.log('Logged In');
   }
