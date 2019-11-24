@@ -6,24 +6,21 @@ const fs = require('fs-extra');
 const axios = require('axios');
 const db = `${path.dirname(__dirname)}/data.json`;
 axios.defaults.baseURL = 'https://stitch.mongodb.com/api/admin/v3.0';
+const validator = require('../validation');
 
 
-const validateInput = (input) => {
-  const { error } = joi.string().required().error(new Error('Value is required and MUST be a string')).validate(input);
-  return error ? error.message : true;
-}
 class LoginCommand extends Command {
   getAnswers = async() => {
     const prompts = [];
     prompts.push({
       name: 'public',
       message: 'Enter public key',
-      validate: (answer) => validateInput(answer)
+      validate: (answer) => validator.validateStringInput(answer)
     });
     prompts.push({
       name: 'private',
       message: 'Enter private key',
-      validate: (answer) => validateInput(answer)
+      validate: (answer) => validator.validateStringInput(answer)
     });
     return await inquirer.prompt(prompts);
   }

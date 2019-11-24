@@ -1,10 +1,9 @@
 const { Command, flags } = require('@oclif/command')
 const inquirer = require('inquirer');
-const joi = require('@hapi/joi');
 const path = require('path');
 const fs = require('fs-extra');
 const axios = require('axios');
-const db = `${path.dirname(__dirname)}/data.json`;
+const { storage: db } = require('../../utils');
 axios.defaults.baseURL = 'https://stitch.mongodb.com/api/admin/v3.0';
 
 
@@ -17,6 +16,7 @@ class UseCommand extends Command {
       this.exit();
     } else {
       this.apps = data.apps.map(app => app.name);
+      return data.apps;
     }
   }
   getActiveProject = () => {
@@ -35,10 +35,10 @@ class UseCommand extends Command {
     return await inquirer.prompt(prompts);
   }
   async run() {
-    this.getProjects();
+    const projects = this.getProjects();
     const { project } = await this.prompt();
     const data = fs.readJSONSync(db);
-    data.activeProject = project;
+    data.activeProject = projects.find(app => app.name === project);
     fs.writeJSONSync(db, data);
     this.log(`${project} is now active`);
   }

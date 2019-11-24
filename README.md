@@ -28,10 +28,29 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`msp functions:test`](#msp-functionstest)
 * [`msp help [COMMAND]`](#msp-help-command)
 * [`msp login`](#msp-login)
 * [`msp logout`](#msp-logout)
 * [`msp use`](#msp-use)
+
+## `msp functions:test`
+
+Describe the command here
+
+```
+USAGE
+  $ msp functions:test
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/functions/test.js](https://github.com/summitech/stitch-cli-plus/blob/v1.0.0/src/commands/functions/test.js)_
 
 ## `msp help [COMMAND]`
 
@@ -66,7 +85,7 @@ _See code: [src/commands/login.js](https://github.com/summitech/stitch-cli-plus/
 
 ## `msp logout`
 
-Describe the command here
+Logout
 
 ```
 USAGE
@@ -74,17 +93,13 @@ USAGE
 
 OPTIONS
   -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
 ```
 
 _See code: [src/commands/logout.js](https://github.com/summitech/stitch-cli-plus/blob/v1.0.0/src/commands/logout.js)_
 
 ## `msp use`
 
-Describe the command here
+set an active Stitch project
 
 ```
 USAGE
@@ -92,10 +107,6 @@ USAGE
 
 OPTIONS
   -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
 ```
 
 _See code: [src/commands/use.js](https://github.com/summitech/stitch-cli-plus/blob/v1.0.0/src/commands/use.js)_
