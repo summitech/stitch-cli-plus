@@ -6,6 +6,7 @@ axios.defaults.baseURL = 'https://stitch.mongodb.com/api/admin/v3.0';
 const { fetchUsers, isLoggedIn, isValidStitchProject, storage, refreshSession } = require('../../../utils');
 const validator = require('../../validation');
 
+
 class TestCommand extends Command {
   executeFunction = async (name, payload, isSystemUser, userId) => {
     const params = isSystemUser ? {run_as_system: true} : {user_id: userId}
@@ -89,7 +90,7 @@ class TestCommand extends Command {
         throw new Error('user does not exist');
       }
     }
-    const payload = payloadType === 'inline' ? args : fs.readSync(path);
+    const payload = payloadType === 'inline' ? args : fs.readFileSync(path, 'utf8').trim();
     this.executeFunction(fnName, payload, isSystemUser, userId);
   }
 }
